@@ -1,0 +1,196 @@
+<templateSet group="JavaScript-Custom">
+  <template name="jqr" value="$(function () {&#10;    console.log('ready');&#10;});" description="jQuery Ready" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="log" value="console.log($END$);" description="Console.log" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="fun" value="function $NAME$() {&#10;&#9;$END$&#10;}" description="function template" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="jsMethodName()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ifn" value="(d, i) =&gt; {&#10;    $END$&#10;}" description="two params arrow fn" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="sfn" value="d =&gt; {&#10;    $END$&#10;}" description="single param arrow fn" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="$t" value="var $this = $(this);&#10;" description="$this = $(this)" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="iife" value="(function () {&#10;&#9;$END$&#10;}());" description="Immediately-Invoked Function Expression" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="st" value="setTimeout(() =&gt; {&#10;&#9;$END$&#10;}, $TIME$);" description="setTimout" toReformat="true" toShortenFQNames="true">
+    <variable name="TIME" expression="" defaultValue="&quot;1000&quot;" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="oke" value="Object.keys($COL$).forEach($VAR$ =&gt; {&#10;&#9;$END$&#10;});" description="Object forEach" toReformat="true" toShortenFQNames="true">
+    <variable name="COL" expression="jsArrayVariable()" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="si" value="setInterval(() =&gt; {&#10;&#9;$END$&#10;}, $TIME$);" description="SetInterval" toReformat="true" toShortenFQNames="true">
+    <variable name="TIME" expression="" defaultValue="&quot;1000&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="esb" value="/*eslint-disable no-console, no-alert */" description="eslint ignore block" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="fin" value="for (const $VAR$ in $ARRAY$) {&#10;&#9;if ({}.hasOwnProperty.call($ARRAY$, $VAR$)) {&#10;  &#9;&#9;$END$&#10;  &#9;}&#10;}" description="Iterate (for..in)" toReformat="true" toShortenFQNames="true">
+    <variable name="ARRAY" expression="jsArrayVariable()" defaultValue="&quot;array &quot;" alwaysStopAt="true" />
+    <variable name="VAR" expression="jsSuggestVariableName()" defaultValue="&quot;o&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="req" value="require('$END$')" description="require" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="dcl" value="document.addEventListener('DOMContentLoaded', function () {&#10;    console.log('ready');&#10;});" description="DOMContentLoaded" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="swt" value="switch ($EXPR$) {&#10;  case $END$: {&#10;    break;&#10;  }&#10;  default: {&#10;    break;&#10;  }&#10;}" description="Switch Block" toReformat="true" toShortenFQNames="true">
+    <variable name="EXPR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="cc" value="constructor () {&#10;    $END$&#10;}" description="class constructor" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="dqs" value="document.querySelector($END$);" description="querySelector" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="dqsa" value="document.querySelectorAll($END$);" description="querySelectorAll" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="epd" value="e.preventDefault();$END$" description="Event PreventDefault" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="esl" value="//eslint-disable-line no-console" description="eslint ignore line" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ims" value="import { $END$ } from '$VAR$';" description="import named" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rf" value="return false;$END$" description="return false" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rt" value="return true;$END$" description="return true" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="elif" value="else if ($VAR$) {&#10;    $END$&#10;}" description="esle if block" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="imp" value="import $NAME$ from '$MOD$';$END$" description="import default" toReformat="false" toShortenFQNames="true">
+    <variable name="MOD" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="camelCase(MOD)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="oba" value="Object.assign({}, $END$)" description="Object assign" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="efn" value="export function $NAME$($VAR$) {&#10;    $END$&#10;}" description="export function" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="obk" value="Object.keys($END$)" description="Object keys" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="if" value="if ($VAR$) {&#10;    $END$&#10;}" description="if block" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="it" value="it('$VAR$', () =&gt; {&#10;  $END$&#10;});" description="mocha it" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="elc" value="const el = e.currentTarget;$END$" description="const event currentTarget" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="prom" value="return new Promise((resolve, reject) =&gt; {&#10;    $END$&#10;});" description="new Promise" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="tc" value="try {&#10;  $VAR$&#10;}&#10;catch (error) {&#10;  $END$&#10;}" description="try catch" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="afn" value="() =&gt; $END$" description="anon arrow fn" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="fof" value="for (const $VAR$ of $ARRAY$) {&#10;&#9;$END$&#10;}" description="Iterate (for..of)" toReformat="true" toShortenFQNames="true">
+    <variable name="ARRAY" expression="jsArrayVariable()" defaultValue="&quot;array &quot;" alwaysStopAt="true" />
+    <variable name="VAR" expression="jsSuggestVariableName()" defaultValue="&quot;o&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>

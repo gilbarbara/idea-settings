@@ -1,0 +1,24 @@
+<templateSet group="PHP-Custom">
+  <template name="pra" value="echo &quot;&lt;pre&gt;&quot;;&#10;print_r($END$);&#10;echo &quot;&lt;/pre&gt;&quot;;" description="print array with pre" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="log" value="echo &quot;&lt;pre&gt;&quot;;&#10;print_r($END$);&#10;echo &quot;&lt;/pre&gt;&quot;;" description="print array with pre" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="php" value="&lt;?php $END$; ?&gt;" description="PHP Empty Tag" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="pe" value="&lt;?php echo $END$; ?&gt;" description="PHP Echo" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>

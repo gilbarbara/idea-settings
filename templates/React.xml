@@ -1,0 +1,143 @@
+<templateSet group="React">
+  <template name="rcc5" value="var React = require('react/addons');&#10;&#10;var $VAR$ = React.createClass({&#10;&#10;&#9;render: function() {&#10;&#9;&#9;return (&#10;&#9;&#9;&#9;&lt;div /&gt;$END$&#10;&#9;&#9;);&#10;&#9;}&#10;&#10;});&#10;&#10;module.exports = $VAR$;" description="React-Class" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="&quot;CLASS&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rscu" value="shouldComponentUpdate (nextProps, nextState) {&#10;&#9;return $VAR$;$END$&#10;}" description="React-shouldComponentUpdate" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rcdm" value="componentDidMount () {&#10;&#9;$END$&#10;}&#10;" description="React-componentDidMount" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rcwu" value="componentWillUpdate (nextProps, nextState) {&#10;&#9;$END$&#10;}&#10;" description="React-componentWillUpdate" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rcwun" value="componentWillUnmount () {&#10;&#9;$END$&#10;}&#10;" description="React-componentWillUnmount" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rcwrp" value="componentWillReceiveProps (nextProps) {&#10;&#9;$END$&#10;}&#10;" description="React-componentWillReceiveProps" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rcwm" value="componentWillMount () {&#10;&#9;$END$&#10;}&#10;" description="React-componentWillMount" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rcdu" value="componentDidUpdate (prevProps, prevState) {&#10;&#9;$END$&#10;}&#10;" description="React-componentDidUpdate" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rpt" value="static propTypes = {&#10;&#9;$VAR$: React.PropTypes.$STR$.isRequired&#10;};" description="React-propTypes" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="STR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ren" value="render () {&#10;&#9;return (&#10;&#9;&#9;$VAR$&#10;&#9;);&#10;}" description="React-render" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="&quot;&lt;div /&gt;&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rss" value="this.setState({&#10;&#9;$VAR$: $END$&#10;});" description="React-setState" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rdp" value="static defaultProps = {&#10;&#9;$VAR$: $END$&#10;};" description="React-defaultProps" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JS_STATEMENT" value="false" />
+    </context>
+  </template>
+  <template name="rcc" value="import React from 'react';&#10;import { shouldComponentUpdate } from 'utils/helpers';&#10;&#10;export default class $END$ extends React.Component {&#10;&#9;constructor (props) {&#10;&#9;&#9;super(props);&#10;&#9;&#9;this.state = {};&#10;&#9;}&#10;&#9;&#10;&#9;shouldComponentUpdate = shouldComponentUpdate;&#10;&#10;&#9;render () {&#10;&#9;&#9;return (&#10;&#9;&#9;&#9;&lt;div&gt;&lt;/div&gt;&#10;&#9;&#9;);&#10;&#9;}&#10;}&#10;" description="React Component" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rpi" value="$START$: React.PropTypes.$END$" description="React-prop" toReformat="false" toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rctx" value="static contextTypes = {&#10;&#9;$START$: React.PropTypes.$END$&#10;};" description="React-Context Child" toReformat="true" toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rcxp" value="static childContextTypes = {&#10;&#9;$VAR$: React.PropTypes.$TYPE$,&#10;};&#10;&#10;getChildContext() {&#10;&#9;return {&#10;&#9;&#9;$VAR$: this.$END$&#10;&#9;};&#10;}" description="React-Context Provider" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rdsih" value="dangerouslySetInnerHTML={{ __html: $END$ }}" description="React-dangerouslySetInnerHTML" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JSX_HTML" value="true" />
+    </context>
+  </template>
+  <template name="cs" value="const state = this.state;$END$" description="const state" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="cp" value="const { $VAR$ } = this.props;$END$" description="const props" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="csp" value="const state = this.state;&#10;const props = this.props;$END$" description="const state and props" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="tp" value="this.props$END$" description="React-this.props" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ts" value="this.state$END$" description="React-this.state" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rp" value="React.PropTypes.$END$" description="React.propTypes" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rpr" value="$NAME$: React.PropTypes.$TYPE$.isRequired,$END$" description="React.propTypes required" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ccr" value="constructor (props) {&#10;    super(props);&#10;    $END$&#10;}" description="Constructor with props" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>

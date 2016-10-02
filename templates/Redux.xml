@@ -1,0 +1,30 @@
+<templateSet group="Redux">
+  <template name="rxc" value="import React from 'react';&#10;import { connect } from 'react-redux';&#10;import { shouldComponentUpdate } from 'utils/shouldUpdate';&#10;&#10;import { showAlert } from '../actions';&#10;import Loader from '../components/Loader';&#10;&#10;export class $VAR$ extends React.Component {&#10;    static contextTypes = {&#10;&#9;&#9;app: React.PropTypes.object.isRequired&#10;&#9;};&#10;&#9;&#10;&#9;static propTypes = {&#10;&#9;&#9;$STATE$: React.PropTypes.object.isRequired,&#10;&#9;&#9;dispatch: React.PropTypes.func.isRequired,&#10;&#9;&#9;location: React.PropTypes.object.isRequired&#10;&#9;};&#10;&#9;&#10;&#9;shouldComponentUpdate = shouldComponentUpdate;&#10;&#10;&#9;componentDidMount() {&#10;&#9;&#9;if (!this.props.$STATE$.error &amp;&amp; !this.props.$STATE$.ready) {&#10;&#9;&#9;&#9;this.props.dispatch($END$);&#10;&#9;&#9;}&#10;&#10;&#9;&#9;this.context.app.setData('$VAR$');&#10;&#9;}&#10;&#10;&#9;componentDidUpdate(prevProps) {&#10;&#9;&#9;if (!prevProps.$STATE$.error &amp;&amp; this.props.$STATE$.error) {&#10;&#9;&#9;&#9;this.props.dispatch(showAlert('error', this.state.message, true));&#10;&#9;&#9;}&#10;&#9;}&#10;&#10;&#9;render() {&#10;&#9;&#9;const $STATE$ = this.props.$STATE$;&#10;&#9;&#9;const html = (&lt;Loader /&gt;);&#10;&#10;&#9;&#9;if ($STATE$.ready) {&#10;&#9;&#9;&#9;console.log($STATE$);&#10;&#9;&#9;}&#10;&#10;&#9;&#9;return (&#10;&#9;&#9;&#9;&#9;&lt;div&gt;{html}&lt;/div&gt;&#10;&#9;&#9;);&#10;&#9;}&#10;}&#10;&#10;function mapStateToProps(state) {&#10;&#9;return { $STATE$: state.$STATE$ };&#10;}&#10;&#10;export default connect(mapStateToProps)($VAR$);&#10;" description="Redux Container" toReformat="true" toShortenFQNames="true">
+    <variable name="STATE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rxce" value="function mapStateToProps(state) {&#10;  return { $VAR$: state.$VAR$ };&#10;}&#10;&#10;export default connect(mapStateToProps)($END$);" description="Redux Connect" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="dis" value="this.props.dispatch($END$)" description="Redux Dispatch" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="conn" value="import { connect } from 'react-redux';$END$" description="Require Connect" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="dp" value="dispatch: React.PropTypes.func.isRequired,$END$" description="Redux Dispatch PropType" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>

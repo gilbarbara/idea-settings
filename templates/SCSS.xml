@@ -1,0 +1,7 @@
+<templateSet group="SCSS">
+  <template name="ahh" value="&amp;:active,&#10;&amp;:focus,&#10;&amp;:hover {&#10;    text-decoration: none;&#10;}" description="link hover" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+</templateSet>

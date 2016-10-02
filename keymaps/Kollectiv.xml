@@ -1,0 +1,53 @@
+<keymap version="1" name="Kollectiv" parent="Mac OS X 10.5+">
+  <action id="ExpandAllToLevel1">
+    <keyboard-shortcut first-keystroke="meta alt multiply" second-keystroke="1" />
+    <keyboard-shortcut first-keystroke="meta alt 1" />
+  </action>
+  <action id="ExpandAllToLevel2">
+    <keyboard-shortcut first-keystroke="meta alt multiply" second-keystroke="2" />
+    <keyboard-shortcut first-keystroke="meta alt 2" />
+  </action>
+  <action id="ExpandAllToLevel3">
+    <keyboard-shortcut first-keystroke="meta alt multiply" second-keystroke="3" />
+    <keyboard-shortcut first-keystroke="meta alt 3" />
+  </action>
+  <action id="ExpandAllToLevel4">
+    <keyboard-shortcut first-keystroke="meta alt multiply" second-keystroke="4" />
+    <keyboard-shortcut first-keystroke="meta alt 4" />
+  </action>
+  <action id="ExpandAllToLevel5">
+    <keyboard-shortcut first-keystroke="meta alt multiply" second-keystroke="numpad5" />
+    <keyboard-shortcut first-keystroke="meta alt 5" />
+  </action>
+  <action id="PublishGroup.SyncLocalVsRemoteWith">
+    <keyboard-shortcut first-keystroke="ctrl meta s" />
+  </action>
+  <action id="PublishGroup.Upload">
+    <keyboard-shortcut first-keystroke="ctrl meta u" />
+  </action>
+  <action id="ReopenClosedTab">
+    <keyboard-shortcut first-keystroke="ctrl meta t" />
+  </action>
+  <action id="RevealIn">
+    <keyboard-shortcut first-keystroke="alt r" />
+  </action>
+  <action id="SwitchApply">
+    <keyboard-shortcut first-keystroke="ctrl alt enter" />
+  </action>
+  <action id="SwitchDown">
+    <keyboard-shortcut first-keystroke="ctrl alt down" />
+  </action>
+  <action id="SwitchLeft">
+    <keyboard-shortcut first-keystroke="ctrl alt left" />
+  </action>
+  <action id="SwitchRight">
+    <keyboard-shortcut first-keystroke="ctrl alt right" />
+  </action>
+  <action id="SwitchUp">
+    <keyboard-shortcut first-keystroke="ctrl alt up" />
+  </action>
+  <action id="linessorter.sort">
+    <keyboard-shortcut first-keystroke="shift alt l" />
+    <keyboard-shortcut first-keystroke="shift ctrl s" />
+  </action>
+</keymap>
