@@ -1,9 +1,4 @@
 <templateSet group="JavaScript-Custom">
-  <template name="jqr" value="$(function () {&#10;    console.log('ready');&#10;});" description="jQuery Ready" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="JAVA_SCRIPT" value="true" />
-    </context>
-  </template>
   <template name="log" value="console.log($END$);" description="Console.log" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
@@ -16,16 +11,6 @@
     </context>
   </template>
   <template name="ifn" value="(d, i) =&gt; {&#10;    $END$&#10;}" description="two params arrow fn" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="JAVA_SCRIPT" value="true" />
-    </context>
-  </template>
-  <template name="sfn" value="d =&gt; {&#10;    $END$&#10;}" description="single param arrow fn" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="JAVA_SCRIPT" value="true" />
-    </context>
-  </template>
-  <template name="$t" value="var $this = $(this);&#10;" description="$this = $(this)" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
@@ -59,19 +44,21 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="fin" value="for (const $VAR$ in $ARRAY$) {&#10;&#9;if ({}.hasOwnProperty.call($ARRAY$, $VAR$)) {&#10;  &#9;&#9;$END$&#10;  &#9;}&#10;}" description="Iterate (for..in)" toReformat="true" toShortenFQNames="true">
-    <variable name="ARRAY" expression="jsArrayVariable()" defaultValue="&quot;array &quot;" alwaysStopAt="true" />
-    <variable name="VAR" expression="jsSuggestVariableName()" defaultValue="&quot;o&quot;" alwaysStopAt="true" />
+  <template name="fin" value="for (const $VAR$ in $OBJECT$) {&#10;&#9;if ({}.hasOwnProperty.call($OBJECT$, $VAR$)) {&#10;  &#9;&#9;$END$&#10;  &#9;}&#10;}" description="Iterate (for..in)" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="jsSuggestIndexName()" defaultValue="&quot;o&quot;" alwaysStopAt="true" />
+    <variable name="OBJECT" expression="jsSuggestVariableName()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="req" value="require('$END$')" description="require" toReformat="true" toShortenFQNames="true">
+  <template name="req" value="const $NAME$ = require('$MOD$');$END$" description="require" toReformat="true" toShortenFQNames="true">
+    <variable name="MOD" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="camelCase(MOD)" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="dcl" value="document.addEventListener('DOMContentLoaded', function () {&#10;    console.log('ready');&#10;});" description="DOMContentLoaded" toReformat="true" toShortenFQNames="true">
+  <template name="dcl" value="document.addEventListener('DOMContentLoaded', () =&gt; {&#10;    console.log('ready');&#10;});" description="DOMContentLoaded" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
@@ -107,8 +94,9 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="ims" value="import { $END$ } from '$VAR$';" description="import named" toReformat="false" toShortenFQNames="true">
+  <template name="ims" value="import { $NAME$ } from '$VAR$';$END$" description="import named" toReformat="true" toShortenFQNames="true">
     <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
@@ -129,14 +117,9 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="imp" value="import $NAME$ from '$MOD$';$END$" description="import default" toReformat="false" toShortenFQNames="true">
+  <template name="imp" value="import $NAME$ from '$MOD$';$END$" description="import default" toReformat="true" toShortenFQNames="true">
     <variable name="MOD" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="NAME" expression="camelCase(MOD)" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="JAVA_SCRIPT" value="true" />
-    </context>
-  </template>
-  <template name="oba" value="Object.assign({}, $END$)" description="Object assign" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
@@ -159,13 +142,7 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="it" value="it('$VAR$', () =&gt; {&#10;  $END$&#10;});" description="mocha it" toReformat="true" toShortenFQNames="true">
-    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="JAVA_SCRIPT" value="true" />
-    </context>
-  </template>
-  <template name="elc" value="const el = e.currentTarget;$END$" description="const event currentTarget" toReformat="true" toShortenFQNames="true">
+  <template name="elc" value="const { currentTarget } = e;$END$" description="const event currentTarget" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
@@ -189,6 +166,74 @@
   <template name="fof" value="for (const $VAR$ of $ARRAY$) {&#10;&#9;$END$&#10;}" description="Iterate (for..of)" toReformat="true" toShortenFQNames="true">
     <variable name="ARRAY" expression="jsArrayVariable()" defaultValue="&quot;array &quot;" alwaysStopAt="true" />
     <variable name="VAR" expression="jsSuggestVariableName()" defaultValue="&quot;o&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ro" value="return {&#10;    $END$&#10;};&#10;" description="return object" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="exd" value="export default $END$" description="export default" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ii" value="/* istanbul ignore $END$ */" description="istanbul ignore" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+    </context>
+  </template>
+  <template name="icx" value="import cx from 'classnames';$END$" description="import classnames" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="exp" value="expect($ST$).$COMP$($END$);" description="expect" toReformat="true" toShortenFQNames="true">
+    <variable name="ST" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="COMP" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="cd" value="const { $PARAM$ } = $VAR$;$END$" description="const destructiring assign" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="eld" value="const { dataset } = e.currentTarget;$END$" description="const event dataset" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="red" value=".reduce((acc, d, i) =&gt; {&#10;   $END$&#10;   return acc;&#10; }, $ACC$);" description="reducer" toReformat="true" toShortenFQNames="true">
+    <variable name="ACC" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ire" value="import React from 'react';$END$" description="import React" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ipt" value="import PropTypes from 'prop-types';$END$" description="import prop-types" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="isty" value="import styled from 'styled-components';$END$" description="import styled-components" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="reqd" value="const { $METHOD$ } = require('$MOD$');$END$" description="require and destructure" toReformat="true" toShortenFQNames="true">
+    <variable name="MOD" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="METHOD" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>

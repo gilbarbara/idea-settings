@@ -4,4 +4,24 @@
       <option name="CSS" value="true" />
     </context>
   </template>
+  <template name="befo" value="&amp;:before {&#10;    content: '';&#10;    display: block;&#10;    position: absolute;&#10; }" shortcut="SPACE" description="before" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="std" value="/* stylelint-disable $END$ */" description="stylelint disable" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="ste" value="/* stylelint-enable */$END$" description="stylelint enable" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="stdl" value="/* stylelint-disable-line $END$ */" description="stylelint disable-line" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
 </templateSet>

@@ -19,6 +19,9 @@
     <keyboard-shortcut first-keystroke="meta alt multiply" second-keystroke="numpad5" />
     <keyboard-shortcut first-keystroke="meta alt 5" />
   </action>
+  <action id="Javascript.Linters.EsLint.Fix">
+    <keyboard-shortcut first-keystroke="shift ctrl f" />
+  </action>
   <action id="PublishGroup.SyncLocalVsRemoteWith">
     <keyboard-shortcut first-keystroke="ctrl meta s" />
   </action>
